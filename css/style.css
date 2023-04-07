@@ -1,0 +1,276 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+body{
+	font-family: 'Times New Roman', Times, serif;
+	width: 1200px;
+	margin: 0 auto;
+}
+header{
+	display: flex;
+	justify-content: space-between;
+}
+header h1{
+	background: rgba(0,0,0,0.1);
+	color: #455344;
+	padding: 10px;
+	flex: 1 0 50%;
+}
+header nav{
+	width: 100%;
+	background: rgba(0,0,0,0.1);
+	text-align: right;
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	font-size:20px;
+}
+header nav a{
+	padding: 0 15px;
+	line-height: 60px;
+	color: #718f4e;
+}
+header nav a:hover,	
+header nav a.selected{
+	background: #718f4e;
+	color: white;
+	font-weight: bold;
+}
+
+main > article >img{
+	width: 100%;
+	height: 500px;
+}
+main > article  > section{
+	display: flex;
+	align-items: center;
+	background: #f3f3f3;
+	padding: 20px;
+}
+main > article  > section img,
+main > article  > section iframe{
+	flex: 1 0 50%;
+	height: 300px;
+	border: none;
+}
+main > article  > section  p{
+	font-size: 20px;
+	text-indent: 2em;
+	text-align: justify;
+}
+main > article  > section  article,
+main > article  > section  iframe + article{
+	padding:0 50px;
+
+}
+main > article  > section  article  h2{
+	padding:5px 0;
+	border-bottom: 1px solid #000;
+	margin: 10px 0;
+}
+main > article  > section  article h2 ~ p{
+	font-size: 20px;
+	color: #555555;
+}
+main > article  > section img{
+	border: 1px dashed #323232;
+	padding: 10px;
+	border-radius: 3px;
+}
+main > article  > section:nth-of-type(2){
+	display: block;
+	text-align: center;
+	
+}
+main > article  > section:nth-of-type(2) video{
+	width: 100%;
+	padding: 20px 40px;
+	box-sizing: border-box;
+}
+main >article:nth-of-type(2){
+	text-align: center;
+}
+main >article:nth-of-type(2) h2{
+	margin: 5px 0;
+}
+main >article:nth-of-type(2) p{
+	margin-bottom: 10px;
+	color: #909090;
+	font-size: 12px;
+}
+main >article:nth-of-type(2) iframe{
+	width: 100%;
+	border: none;
+}
+article > article{
+	padding: 10px 30px;
+	background: #eaeaea;
+	
+}
+article > article section{
+	display: flex;
+}
+article > article h2{
+	text-align: center;
+	border-bottom: #323232 1px solid;
+	padding: 10px 0;
+	margin-bottom: 20px;
+}
+article  > article section ol{
+	font-size: 18px;
+	color: #323232;
+	width: 170px;
+	margin: 20px auto;
+	flex: 1 0 20%;
+	padding: 0 20px;
+}
+article > article section table{
+	border-collapse:collapse;
+	flex: 1 0 60%;
+}
+
+article > article section table span{
+	display: block;
+	font-size: 18px;
+	padding: 0 10px;
+}
+form{
+	padding: 20px;
+	background: #eaeaea;
+}
+input[type='submit']{
+	padding: 2px 15px;
+}
+form p{
+	margin: 5px 0;
+}
+#imgs ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	list-style: none;
+	padding: 20px;
+}
+#imgs ul li{
+	width: 30%;
+	flex: 1 0 30%;
+	margin: 10px;
+	box-shadow: 1px 1px 5px 1px #a7a7a7;
+}
+#imgs img{
+	width: 100%;
+	height: 250px;
+	
+}
+#form p span{
+	display: inline-block;
+	width: 70px;
+}
+#form p{
+	display: flex;
+	margin: 10px 0;
+}
+#form  textarea,
+#form input{
+	border: none;
+	padding: 5px;
+	background: white;
+	border-radius: 5px;
+}
+#form input[type='submit']{
+	cursor: pointer;
+	background: #455344;
+	color: white;
+}
+@media screen and (max-width: 820px) {
+  body{
+	  width: 100%;
+  }
+  header h1{
+	  display: none;
+  }
+  header nav{
+	  font-size: 13px;
+	  justify-content: start;
+  }
+  main > article >img{
+	  height: 200px;
+	  object-fit: cover;
+  }
+  main > article  > section img, main > article  > section iframe{
+	  width: 100%;
+  }
+  main > article  > section{
+	  display: block;
+  }
+  main > article  > section  article, main > article  > section  iframe + article{
+	  padding: 0 10px;
+  }
+  main > article  > section:nth-of-type(2) video{
+	  padding: 10px 0;
+  }
+  main > article  > section img{
+	  border: none;
+	  padding: 10px 0;
+  }
+  article > article section{
+	  display: block;
+  }
+  article > article section table{
+	 /* display: none; */
+	 width: 100%;
+  }
+  article > article section table td,
+  article > article section table th{
+	  padding: 5px;
+  }
+  #imgs ul li{
+	  flex: 45%;
+	  width: 45%;
+  }
+}
+@media screen and (max-width: 560px){
+	#imgs ul li{
+		flex: 1 0 100%;
+		width: 100%;
+	}
+}
+#top {
+	position: relative;
+}
+#top h3{
+	position: absolute;
+	top: 0;left: 0;right: 0;bottom: 0;
+	margin: auto;
+	z-index: 999;
+	background: rgba(255,255,255,.7);
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	padding: 10px 0;
+}
+#top img{
+	width: 100%;
+}
+
+
+
+#tools{
+	position: fixed;
+	bottom: 30px;
+	right: 5px;
+	
+}
+#tools span{
+	display: block;
+	background: rgba(0, 85, 255, 0.5);
+	color: white;
+	padding: 10px;
+	margin: 5px 0;
+	border-radius: 5px;
+	cursor: pointer;
+}
